@@ -1,0 +1,257 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  color: #333;
+  font-size:14px; 
+  display: flex;
+  flex-flow: row wrap;
+  margin:0px;
+}
+a {
+  text-decoration: none;
+}
+
+body > * {
+  width:100%;
+}
+header{
+  width: 100%;
+  background-color: rgb(59, 58, 58);
+}
+header > info {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+header img{
+  width: 64px;
+  height: 64px;
+  border-radius:50%;
+  margin:20px auto 10px auto;
+}
+header h3{
+  margin: 0px;
+}
+header p{
+  margin:10px 0 20px 0;
+  color: rgb(179, 174, 174);
+}
+
+main{
+  flex:1;
+  order:1;
+  margin-left:200px;
+  padding:10px;
+  /* border:1px solid; */
+}
+main section {
+  margin:30px 0;
+}
+/* start section 个人信息 */
+main h2{
+  font-size: 18px;
+}
+main h2::after {
+  content: " ";
+  position: relative;
+  top:-5px;
+  right:-45px;
+  display: inline-block;
+  width: 45%;
+  height:3px;
+  background-color:rgb(105, 169, 163);
+}
+main h2 > i{
+  display:inline-block;
+  width:35px;
+  height:35px;
+  text-align:center;
+  line-height:35px;
+  background-color:rgb(105, 169, 163);
+  border-radius: 50%;
+  color: #fff;
+  margin-right:10px;
+}
+main .info ul {
+  margin-left:10px;
+  list-style:none;
+}
+main ul li{
+  padding:5px 0;
+}
+main ul > li > i{
+  margin-right:20px;
+}
+/* end section 个人信息 */
+/* start 掌握技能 */
+main .master ul{
+  margin-left:25px;
+}
+/* end 掌握技能 */
+/* start section 技能图谱 */
+main .skill ul{
+  list-style: none;
+}
+main .skill ul li {
+  padding: 10px 0;
+  border-bottom:2px solid #ccc;
+}
+main .skill ul li:nth-child(1)::after{
+  content: "";
+  display: inline-block;
+  width:70%;
+  height:2px;
+  background-color:rgb(105, 169, 163);
+  position: relative;
+  top:17px;
+  left:-68px;
+}
+main .skill ul li:nth-child(2)::after{
+  content: "";
+  display: inline-block;
+  width:50%;
+  height:2px;
+  background-color:rgb(105, 169, 163);
+  position: relative;
+  top:17px;
+  left:-36px;
+}
+main .skill ul li:nth-child(3)::after{
+  content: "";
+  display: inline-block;
+  width:70%;
+  height:2px;
+  background-color:rgb(105, 169, 163);
+  position: relative;
+  top:17px;
+  left:-34px;
+}
+main .skill ul li:nth-child(4)::after{
+  content: "";
+  display: inline-block;
+  width:40%;
+  height:2px;
+  background-color:rgb(105, 169, 163);
+  position: relative;
+  top:17px;
+  left:-25px;
+}
+main .skill ul li:nth-child(5)::after{
+  content: "";
+  display: inline-block;
+  width:80%;
+  height:2px;
+  background-color:rgb(105, 169, 163);
+  position: relative;
+  top:17px;
+  left:-38px;
+}
+/* end section 技能图谱 */
+aside{
+  flex:2;
+  order:2;
+  margin-right:200px;
+  padding:10px;
+  margin-left: 30px;
+}
+aside section {
+  margin:30px 0;
+}
+aside h2{
+  font-size: 18px;
+}
+aside h2::after {
+  content: " ";
+  position: relative;
+  top:-5px;
+  right:-65px;
+  display: inline-block;
+  width: 68%;
+  height:3px;
+  background-color:rgb(105, 169, 163);
+}
+aside h2 > i{
+  display:inline-block;
+  width:35px;
+  height:35px;
+  text-align:center;
+  line-height:35px;
+  background-color:rgb(105, 169, 163);
+  border-radius: 50%;
+  color: #fff;
+  margin-right:10px;
+}
+aside .study ul{
+  list-style: none;
+}
+.study ul li{
+  margin:10px 0;
+  padding:5px 0;
+}
+.study ul li:nth-child(even){
+  margin-left:140px;
+}
+.list ul time{
+  margin-left:5px;
+  margin-right:20px;
+}
+.list ul a{
+  font-weight:bold;
+  color: #000;
+}  
+.list ul span{
+  float:right;
+  color: #ccc;
+}  
+.work ul li:first-child{
+  list-style: none;
+  margin-left:0px;
+}
+.work ul li{
+  margin-left:140px;
+  padding:5px 0;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 1150px){
+  main{
+    margin-left: 50px;
+  }
+  aside{
+    margin-right:50px;
+  }
+}
+@media screen and (max-width: 880px){
+  main{
+    flex:none;
+    padding:0px 100px;
+    margin: 0px;
+  }
+  aside{
+    flex: none;
+    padding: 0px 100px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 580px){
+  main{
+    flex:none;
+    padding:0px 30px;
+    margin: 0px;
+  }
+  aside{
+    flex: none;
+    padding: 0px 30px;
+    margin: 0px;
+  }
+}
